@@ -1,0 +1,33 @@
+# TinyHardcore 极限生存 配置
+hardcore:
+  enabled: true                  # 插件总开关
+  death-handling: kick           # 死亡处理: kick=踢出 | spectator=观战（自由视角）| spectator-lock=观战（锁定最近存活玩家第一视角）
+  spectator-lock-admin: false    # 观战（锁定视角）是否允许锁定到管理员视角（true=允许 | false=不允许，默认跳过管理员）
+  clear-inventory-on-revive: false  # 复活时是否清空背包/装备（true=清空重来 | false=保留背包，默认不清）
+  restart-mode: new-player       # 重新开始模式: new-player=换号当新玩家 | reset=删档重来 | permanent=永久离场(观战)
+  announce-death: true           # 全服死亡公告
+  announce-format: "&c{player} &4永久死亡了！存活 {time}"
+  first-join-message: "&c【极限生存】你只有一条命，死了就没了！"
+  death-message: "&c你已永久死亡！{mode}"
+  revive-admin-only: true        # 只有管理员能复活
+  track-ip: false                # 按IP记录防换号（默认关）
+  reset-spawn-on-restart: false  # 死亡重开后强制回世界出生点（默认关）
+  exempt-permission: hardcore.exempt   # 豁免权限（默认OP，死亡不标记）
+  admin-log: true                # 神权操作日志（写入 admin-log.yml，可追溯）
+
+messages:
+  prefix: "&7[&c极限&7] &r"
+  status-alive: "&a你当前存活。加入时间: &e{join}"
+  status-dead: "&c你已永久死亡。死亡时间: &e{death}&c，原因: &e{cause}"
+  top-title: "&e===== 极限生存存活排行榜 TOP{limit} ====="
+  top-entry: "&e{rank}. &f{player} &7- 存活 &f{time}"
+  deaths-title: "&e===== 极限生存死亡榜 TOP{limit} ====="
+  deaths-entry: "&e{rank}. &f{player} &7- 死于 &f{cause} &7({time})"
+  revived: "&a已复活玩家 &e{player}&a，恢复一条命。"
+  revived-target: "&a你已被管理员复活，生存继续！"
+  exempt-added: "&a已添加 &e{player} &a到豁免名单。"
+  exempt-removed: "&a已移除 &e{player} &a从豁免名单。"
+  exempt-list-title: "&e===== 豁免名单 ====="
+  no-permission: "&c你没有权限这么做。"
+  player-not-found: "&c找不到玩家。"
+  reloaded: "&a配置已重载。"
