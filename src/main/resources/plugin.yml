@@ -1,0 +1,24 @@
+name: TinyHardcore
+version: 1.0.0
+main: nl.tinyaii.hardcore.TinyHardcorePlugin
+api-version: 1.16
+author: TinyAII
+description: 极限生存插件 - 一条命，死亡踢出/观战，管理员复活
+website: https://github.com/TinyAII
+
+commands:
+  极限:
+    aliases: [hardcore]
+    description: 极限生存主命令
+    usage: /极限 <子命令>
+    permission: hardcore.use
+permissions:
+  hardcore.use:
+    description: 使用极限生存命令
+    default: true
+  hardcore.admin:
+    description: 极限生存管理（复活/豁免）
+    default: op
+  hardcore.exempt:
+    description: 豁免极限死亡（默认OP）
+    default: op
